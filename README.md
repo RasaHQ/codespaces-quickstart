@@ -8,16 +8,19 @@ Get started with Rasa Pro in the browser using GitHub Codespaces.
    - Click on "Create codespace on main".
 
 2. **Set Up Environment:**
-   - Open the `.env` file from this repo and add the required keys to that file.
+   - In the codespace, open the `.env` file from this repo and add the required keys to that file.
      ```
-     export RASA_PRO_LICENSE='your_rasa_pro_license_key_here'
-     export OPENAI_API_KEY='your_openai_api_key_here'
+     RASA_PRO_LICENSE='your_rasa_pro_license_key_here'
+     OPENAI_API_KEY='your_openai_api_key_here'
      ```
-   - Set these environment variables by running `source .venv/bin/activate` 
+   - Set these environment variables by running 
      ```
      source .env
      ```
-   - Activate your python environment by running 
+   - Activate your python environment by running
+     ```
+     source .venv/bin/activate
+     ```
 
 3. **Initialize a New Project:**
    - In the terminal, run:
