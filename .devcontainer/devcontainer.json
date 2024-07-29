@@ -15,7 +15,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"onCreateCommand": "pip install -U pip uv; uv venv; source .venv/bin/activate; uv pip install --extra-index-url https://europe-west3-python.pkg.dev/rasa-releases/rasa-pro-python/simple",
+	"onCreateCommand": "pip install -U pip uv; uv venv; source .venv/bin/activate; uv pip install --extra-index-url https://europe-west3-python.pkg.dev/rasa-releases/rasa-pro-python/simple rasa-pro",
 
 	// Configure tool-specific properties.
 	"customizations": {
