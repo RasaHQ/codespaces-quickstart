@@ -44,6 +44,6 @@ Get started with Rasa Pro in the browser using GitHub Codespaces.
 
 6. **Run Custom Actions:**
    If your bot uses custom actions, you will need to run an action server. To do this:
-   - Create a secnd terminal window in the codespace
+   - Create a second terminal window in the codespace
    - load the env vars and activate your virtual environment: `source .env && source .venv/bin/activate`
    - start the action server by running `rasa run actions`
