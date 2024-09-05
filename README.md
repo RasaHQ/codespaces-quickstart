@@ -43,7 +43,7 @@ Get started with Rasa Pro in the browser using GitHub Codespaces.
      GitHub will show a notification, click on the green button to view the inspector where you can chat with your assistant.
 
 6. **Run Custom Actions:**
-   If your bot uses custom actions, you can directly execute them on the Rasa Pro server. To do this, double-check that your `endpoints.yml` file contains the following configuration:
+  In Rasa 3.10 and later, custom actions are automatically run as part of your running assistant. To double-check that this is set up correctly, ensure that your `endpoints.yml` file contains the following configuration:
    ```
    action_endpoint:
       actions_module: "actions" # path to your actions package
