@@ -1,0 +1,59 @@
+version: "3.1"
+
+slots:
+  recipient:
+    type: text
+    mappings:
+      - type: from_llm
+  amount:
+    type: float
+    mappings:
+      - type: from_llm
+  final_confirmation:
+    type: bool
+    mappings:
+      - type: from_llm
+  sender:
+    type: text
+    mappings:
+      - type: from_llm
+
+responses:
+  utter_ask_recipient:
+    - text: "Who would you like to send money to?"
+
+  utter_ask_amount:
+    - text: "How much money would you like to send?"
+
+  utter_ask_final_confirmation:
+    - text: "Please confirm: you want to transfer {amount} to {recipient}?"
+
+  utter_transfer_cancelled:
+    - text: "Your transfer has been cancelled."
+
+  utter_transfer_complete:
+    - text: "All done. {amount} has been sent to {recipient}."
+
+  utter_ask_sender:
+    - text: "From whom your expecting to receive money?"
+
+  utter_ask_receive_amount:
+    - text: "How much money are you expecting to receive?"
+
+  utter_receive_complete:
+    - text: "All done. {amount} has been received from {sender}."
+  
+
+  utter_free_chitchat_response:
+    - text: "placeholder"
+      metadata:
+        rephrase: True
+        rephrase_prompt: |
+          The following is a conversation with an AI assistant built with Rasa.
+          The assistant can help the user transfer money.
+          The assistant is helpful, creative, clever, and very friendly.
+          The user is making small talk, and the assistant should respond, keeping things light.
+          Context / previous conversation with the user:
+          {{history}}
+          {{current_input}}
+          Suggested AI Response:

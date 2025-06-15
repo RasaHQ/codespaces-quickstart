@@ -1,0 +1,25 @@
+{
+  "prompt": null,
+  "prompt_template": null,
+  "user_input": null,
+  "llm": {
+    "id": "rasa_command_generation_model",
+    "models": [
+      {
+        "provider": "rasa",
+        "model": "rasa/cmd_gen_codellama_13b_calm_demo",
+        "api_base": "https://tutorial-llm.rasa.ai"
+      }
+    ]
+  },
+  "flow_retrieval": {
+    "embeddings": {
+      "provider": "openai",
+      "model": "text-embedding-ada-002"
+    },
+    "num_flows": 20,
+    "turns_to_embed": 1,
+    "should_embed_slots": true,
+    "active": false
+  }
+}

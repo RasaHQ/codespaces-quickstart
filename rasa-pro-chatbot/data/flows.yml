@@ -1,0 +1,24 @@
+flows:
+  transfer_money:
+    description: Help users send money to friends and family.
+    steps:
+      - collect: recipient
+      - collect: amount
+        description: the number of US dollars to send
+      - collect: final_confirmation
+        next:
+          - if: not slots.final_confirmation
+            then:
+              - action: utter_transfer_cancelled
+                next: END
+          - else: transfer_successful
+      - action: utter_transfer_complete
+        id: transfer_successful
+
+  receive_money:
+    description: Help users receive money from friends and family.
+    steps:
+      - collect: sender
+      - collect: amount
+        description: the number of US dollars to receive
+      - action: utter_receive_complete
