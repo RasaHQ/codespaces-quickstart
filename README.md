@@ -1,7 +1,7 @@
 # codespaces-quickstart
 Get started with Rasa in the browser using GitHub Codespaces.
 
-### Steps
+### Steps 
 
 1. **Create a Codespace:**
    - Click on the green "Code" button on this page, then scroll down to "Codespaces".
